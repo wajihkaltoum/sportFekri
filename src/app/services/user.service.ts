@@ -37,7 +37,7 @@ constructor (private http: HttpClient, private router: Router) { }
  editProfile(newUser) {
  return this.http.put( this.userUrl, newUser);
  }
-
+// git hub modif
  login(user) {
   this.http.post<{ user: any, message: string }>( this.userUrl + "/signin" , user).subscribe(
   (res) => {
@@ -53,7 +53,7 @@ constructor (private http: HttpClient, private router: Router) { }
   (res.user.role=="admin") ?
    this.router.navigate(['admin']) :
   this.router.navigate(['']);
-  
+
   }
   }
   )
